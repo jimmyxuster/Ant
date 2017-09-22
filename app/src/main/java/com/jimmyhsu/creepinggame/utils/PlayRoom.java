@@ -1,7 +1,6 @@
 package com.jimmyhsu.creepinggame.utils;
 
 
-import android.os.Looper;
 import android.util.Log;
 
 import com.jimmyhsu.creepinggame.bean.Ant;

@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     int oldSize = mResults.size();
                     mResults.clear();
                     mResultAdapter.notifyItemRangeRemoved(0, oldSize);
+                    mResultAdapter.toggleResult(false, -1, -1);
                 }
             });
             mGameView.setAnts(ants);
@@ -69,9 +70,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onEnd(int minTime, int maxTime) {
+        public void onEnd(final int minTime, final int maxTime) {
             showButton();
             mGameView.setResult(minTime, maxTime);
+            mResultView.post(new Runnable() {
+                @Override
+                public void run() {
+                    mResultAdapter.toggleResult(true, maxTime, minTime);
+                    for (int i = 0; i < mResults.size(); i++) {
+                        if (mResults.get(i).getMoveCount() == minTime
+                                || mResults.get(i).getMoveCount() == maxTime) {
+                            mResultAdapter.notifyItemChanged(i);
+                        }
+                    }
+                }
+            });
         }
     };
 
