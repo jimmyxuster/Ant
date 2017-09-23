@@ -12,6 +12,10 @@ public class Stick {
         this.max = max;
     }
 
+    public int getLength() {
+        return max - min;
+    }
+
     public boolean isFallen(Ant ant) {
         return ant.getPosition() <= min || ant.getPosition() >= max;
     }

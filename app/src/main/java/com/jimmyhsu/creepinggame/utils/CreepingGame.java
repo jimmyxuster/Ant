@@ -12,12 +12,13 @@ import java.util.List;
  */
 public class CreepingGame {
 
+    public static final int DEFAULT_STICK_LENGTH = 300;
     private List<Ant> mAnts;
     private Stick mStick;
 
     public CreepingGame(List<Ant> ants) {
         this.mAnts = ants;
-        this.mStick = new Stick(0, 300);
+        this.mStick = new Stick(0, DEFAULT_STICK_LENGTH);
     }
 
     private boolean collides(Ant ant, Ant another) {

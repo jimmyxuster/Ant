@@ -13,6 +13,7 @@ public class Ant {
     private int velocity;
     private int direction;
     private int position;
+    private float displayPosition;
     private boolean isAlive;
 
     public Ant() {
@@ -61,6 +62,19 @@ public class Ant {
 
     public void setPosition(int position) {
         this.position = position;
+    }
+
+    public float getDisplayPosition() {
+        return displayPosition;
+    }
+
+    public void setDisplayPosition(float displayPosition) {
+        if (direction > 0) {
+            displayPosition = Math.min(displayPosition, position + velocity);
+        } else if (direction < 0) {
+            displayPosition = Math.max(displayPosition, position - velocity);
+        }
+        this.displayPosition = displayPosition;
     }
 
     public boolean isAlive() {
