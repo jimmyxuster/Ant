@@ -32,7 +32,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback, Run
     private static final int[] ANT_COLORS = new int[]{0x88E40007, 0x8824E10E, 0x881000EA,
             0x885908D3, 0x88000000};
     private static final int[] ANT_RES = new int[]{R.drawable.red_ant1, R.drawable.red_ant2, R.drawable.green_ant1, R.drawable.green_ant2,
-            R.drawable.blue_ant1, R.drawable.blue_ant2, R.drawable.purple_ant1, R.drawable.purple_ant2, R.drawable.black_ant1, R.drawable.black_ant2};
+            R.drawable.blue_ant1, R.drawable.blue_ant2, R.drawable.white_ant1, R.drawable.white_ant2, R.drawable.black_ant1, R.drawable.black_ant2};
     private static final int[] NUM_RES = new int[]{R.drawable.n0, R.drawable.n1, R.drawable.n2, R.drawable.n3,
             R.drawable.n4, R.drawable.n5, R.drawable.n6, R.drawable.n7, R.drawable.n8, R.drawable.n9};
     private SurfaceHolder mHolder;

@@ -24,10 +24,10 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private GameView mGameView;
+    private PlayRoom mPlayroom;
+
     private FloatingActionButton mToggleFab;
     private RecyclerView mResultView;
-
-    private PlayRoom mPlayroom;
 
     private List<Result> mResults = new ArrayList<>();
     private ResultAdapter mResultAdapter;
